@@ -1,4 +1,9 @@
 .wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin: 0 auto;
+  padding-bottom: 20px;
   background-color: #242530;
   width: 400px;
   height: 700px;
