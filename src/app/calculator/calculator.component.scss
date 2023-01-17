@@ -1,13 +1,28 @@
 .wrapper {
   display: flex;
-  justify-content: center;
-  align-items: end;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
   margin: 0 auto;
   padding-bottom: 20px;
   background-color: #242530;
   width: 400px;
   height: 700px;
   font-family: "Inter", sans-serif;
+
+  input {
+    background-color: inherit;
+    font-size: 55px;
+    color: white;
+    border: 0;
+    height: 50px;
+    width: 350px;
+    margin-bottom: 50px;
+  }
+
+  input:focus {
+    outline: none;
+  }
 
   .grid-container {
     display: grid;
@@ -37,12 +52,24 @@
       background-color: #b2b2b2;
     }
 
+    .grey:hover {
+      background-color: #cbc9c9;
+    }
+
     .navy {
       background-color: #404258;
     }
 
+    .navy:hover {
+      background-color: #5f6285;
+    }
+
     .orange {
       background-color: #f49d1a;
+    }
+
+    .orange:hover {
+      background-color: #f6b046;
     }
 
     .black-font {
