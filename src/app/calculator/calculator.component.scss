@@ -1,0 +1,41 @@
+.wrapper {
+  background-color: #242530;
+  width: 400px;
+  height: 700px;
+  font-size: 30px;
+  font-family: "Inter", sans-serif;
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 78px 78px 78px 78px;
+    gap: 17px;
+
+    .grid-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 78px;
+      width: 78px;
+      border-radius: 100%;
+      cursor: pointer;
+    }
+
+    .zero {
+      grid-column: 1 / span 2;
+      border-radius: 100px;
+      width: 100%;
+    }
+
+    .grey {
+      background-color: #b2b2b2;
+    }
+
+    .navy {
+      background-color: #404258;
+    }
+
+    .orange {
+      background-color: #f49d1a;
+    }
+  }
+}
