@@ -9,11 +9,23 @@ export class CalculatorComponent {
   showValue = '0';
   currentValue = '';
 
+  pattern = /[*+-/%]/;
+
   inputValue(value: string) {
     if (this.currentValue == '0') {
       this.currentValue = value;
     } else if (this.currentValue != '0') {
       this.currentValue = this.currentValue + value;
+      if (
+        this.pattern.test(this.currentValue.slice(-2)[0]) &&
+        this.pattern.test(value)
+      ) {
+        this.currentValue = this.currentValue.substring(
+          0,
+          this.currentValue.length - 2
+        );
+        this.currentValue = this.currentValue + value;
+      }
     }
     this.showValue = this.currentValue;
   }
