@@ -1,5 +1,5 @@
 <div class="wrapper">
-  <input [(ngModel)]="showValue" type="text" />
+  <input [(ngModel)]="showValue" type="text" readonly />
   <div class="grid-container">
     <button (click)="clearValue()" class="grid-item grey black-font">AC</button>
     <button (click)="negativeToggle()" class="grid-item grey black-font">
@@ -23,6 +23,12 @@
     <button (click)="inputValue('+')" class="grid-item orange">+</button>
     <button (click)="inputValue('0')" class="grid-item zero navy">0</button>
     <button (click)="inputValue('.')" class="grid-item navy">.</button>
-    <button (click)="equals()" class="grid-item orange">=</button>
+    <button
+      (click)="equals()"
+      [disabled]="showValue == '0' || currentValue == ''"
+      class="grid-item orange"
+    >
+      =
+    </button>
   </div>
 </div>

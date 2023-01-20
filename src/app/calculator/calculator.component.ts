@@ -29,7 +29,11 @@ export class CalculatorComponent {
   }
 
   equals() {
-    this.showValue = eval(this.currentValue);
+    if (this.showValue.includes('%')) {
+      this.showValue = eval(this.currentValue.replace('%', '*0.01'));
+    } else {
+      this.showValue = eval(this.currentValue);
+    }
     this.currentValue = this.showValue;
   }
 }
